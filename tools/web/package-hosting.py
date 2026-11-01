@@ -6,6 +6,7 @@ source = root / 'sites/raylab/dist'
 target = root / 'output/raylab/raylab-web-hosting.zip'
 target.parent.mkdir(parents=True, exist_ok=True)
 public_names = {
+    'css/light-contrast.css',
     'img/raylab-wordmark-dark.svg', 'img/raylab-wordmark-light.svg',
     'privacidad.html', 'eliminacion-datos.html', 'css/legal.css', '404.html',
     'css/service-previews.css', 'js/service-previews.js', 'css/reference.css', 'js/reference.js', 'css/theme.css', 'js/theme.js', 'index.html', 'img/logo.svg', 'css/style.css', 'css/brand.css', 'css/extras.css',
