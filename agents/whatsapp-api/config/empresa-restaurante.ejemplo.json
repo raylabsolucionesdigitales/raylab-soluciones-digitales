@@ -1,0 +1,16 @@
+{
+  "id": "restaurante-ejemplo",
+  "name": "Restaurante de ejemplo — completar antes de publicar",
+  "creative": {"instructions":"PLANTILLA: crear propuestas conceptuales de presentaciones del restaurante, cartas visuales o composiciones gastronómicas según datos aprobados. No inventar platos disponibles, precios, promociones ni afirmar que la imagen representa un plato real. Adaptar este alcance con el dueño antes de habilitar generación."},
+  "knowledge": [
+    "PLANTILLA, NO PUBLICAR: reemplazar este texto por el nombre real, dirección, horarios, carta, precios aprobados y condiciones de delivery del negocio.",
+    "Si un dato no está confirmado, pedir ayuda al equipo. No confirmar pedidos, reservas ni disponibilidad porque no hay un sistema conectado para hacerlo."
+  ],
+  "guidance": "Responde primero la duda. Pregunta un dato útil por vez. No solicites datos de pago por el chat. Envía la carta o fotos existentes si el cliente las pide. Los enlaces de esta plantilla son de ejemplo: reemplazarlos antes de activar recursos.",
+  "resources": [
+    {"id":"carta","title":"Carta del restaurante","type":"document","url":"https://media.example.com/carta.pdf","filename":"carta.pdf","keywords":["carta","menú"],"enabled":false,"reference":false},
+    {"id":"local","title":"Fotografía del local","type":"image","url":"https://media.example.com/local.jpg","keywords":["local","ambiente"],"enabled":false,"reference":false},
+    {"id":"recorrido","title":"Recorrido del restaurante","type":"video","url":"https://media.example.com/recorrido.mp4","keywords":["recorrido"],"enabled":false,"reference":false},
+    {"id":"bienvenida","title":"Audio de bienvenida","type":"audio","url":"https://media.example.com/bienvenida.mp3","keywords":["bienvenida"],"enabled":false,"reference":false}
+  ]
+}

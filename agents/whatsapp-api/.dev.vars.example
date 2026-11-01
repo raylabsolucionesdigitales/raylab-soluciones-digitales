@@ -1,0 +1,4 @@
+# Local examples only. Set actual values privately; never commit .dev.vars.
+WHATSAPP_VERIFY_TOKEN=""
+META_APP_SECRET=""
+WHATSAPP_PHONE_NUMBER_ID=""

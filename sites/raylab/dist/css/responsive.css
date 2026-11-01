@@ -1,0 +1,60 @@
+.footer-navigation{position:static;inset:auto;background:transparent;border:0;border-radius:0;padding:0}
+.arrow-icon{width:16px;height:16px;flex-shrink:0;vertical-align:middle}
+.button>.arrow-icon{transition:translate .25s}
+.button:hover>.arrow-icon{translate:3px -2px}
+@media(max-width:1050px){.experience-hero .visual{overflow:hidden}.experience-hero .orbit{max-width:80%;max-height:80%}}
+@media(max-width:760px){
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:100px}
+.wrap{width:calc(100% - 40px)}
+header{height:80px;padding:0 20px;flex-wrap:nowrap}
+.menu{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:10px;flex-shrink:0}
+#navigation{display:none;top:72px;left:20px;right:20px;max-height:calc(100dvh - 100px);overflow-y:auto;padding:12px;box-shadow:0 18px 40px #08041288}
+#navigation.open{display:flex}
+#navigation a{display:flex;align-items:center;min-height:44px;padding:8px 12px;font-size:16px}
+.hero{padding-top:32px;gap:0}.hero-copy{min-width:0}
+.hero h1{font-size:clamp(42px,11vw,64px);line-height:1.08;letter-spacing:-1.8px}
+.hero .intro{font-size:16px;line-height:1.7;max-width:100%}
+.eyebrow{font-size:10px;line-height:1.7;letter-spacing:1.3px}
+.actions{flex-direction:column;align-items:stretch;gap:12px}
+.actions .button{justify-content:space-between}
+.actions>.text-link{font-size:14px;min-height:44px;display:flex;align-items:center}
+.button{min-height:48px;font-size:14px;padding:14px 18px}
+.hero-tags{font-size:11px;line-height:1.6;flex-wrap:wrap;gap:8px 14px}
+.experience-hero .visual{width:100%;height:530px;transform:none;scale:1;margin-top:24px;min-width:0}
+.stage-window{left:0;right:0;transform:none}
+.stage-toolbar{font-size:11px;gap:8px}.stage-screen{padding:16px;min-height:250px}.stage-screen h3{font-size:24px}
+.scene-board{gap:6px}.scene-lane{padding:7px}.scene-lane>span{font-size:10px}.scene-ticket{font-size:10px;padding:8px 5px}.scene-ticket small{font-size:9px}
+.scene-caption{font-size:11px}.scene-switcher button{min-height:44px;font-size:12px}.live-terminal{font-size:11px}
+.service-filters button,.solution-tabs button{min-height:44px;font-size:12px}.solution-tabs{flex-wrap:wrap}.solution-tabs button{flex:1 1 80px}
+.section-heading>p,.service>p,.solution-copy>p,.collaboration-grid p,.faq-list p,.contact>div>p{font-size:15px;line-height:1.75}.faq-list summary{font-size:15px}
+input,select,textarea{font-size:16px;min-height:48px;width:100%;max-width:100%;box-sizing:border-box}label{font-size:14px}.form-hint{font-size:12px;line-height:1.6}
+.footer-navigation{position:static;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}.footer-navigation>a{min-height:44px;display:flex;align-items:center;font-size:14px}
+.footer-bottom{gap:18px;flex-wrap:wrap}.site-footer .footer-bottom p{font-size:12px;line-height:1.7}.back-to-top{min-height:44px;display:inline-flex;align-items:center}
+}
+@media(max-width:360px){.wrap{width:calc(100% - 32px)}header{padding:0 16px}.hero h1{font-size:40px}.stage-toolbar{font-size:10px}.stage-lights{letter-spacing:1px}.scene-board{grid-template-columns:1fr 1fr}.scene-lane:last-child{display:none}.footer-identity{flex-direction:column;align-items:flex-start}}
+
+/* Reserve real rows for each animated element so captions remain unobstructed. */
+.experience-hero .visual{display:grid;grid-template-columns:88px minmax(0,1fr);gap:28px 24px;align-content:center;align-items:center;height:auto;min-height:555px;padding:20px 0;overflow:visible}
+.experience-hero .visual>.stage-window{position:relative;inset:auto;grid-column:1/-1;grid-row:1;transform:perspective(1000px) rotateY(-7deg) rotateZ(-3deg);width:calc(100% - 30px);margin-left:25px;min-width:0;box-sizing:border-box;display:flex;flex-direction:column;padding-bottom:76px}
+.experience-hero .stage-toolbar{order:0}
+.experience-hero .scene-caption{order:1;border-top:0;border-bottom:1px solid #c4b5fd22}
+.experience-hero .stage-screen{order:2}
+.experience-hero .visual>.logo-core{position:relative;inset:auto;grid-column:1;grid-row:2;width:64px;height:64px;margin-top:-100px;justify-self:center;transform:rotate(-8deg);box-shadow:none}
+.experience-hero .logo-core>img{width:48px;height:48px}
+.experience-hero .logo-core:before{inset:-8px}
+.experience-hero .logo-core:after{inset:-13px}
+.experience-hero .visual>.code-card{position:relative;inset:auto;grid-column:2;grid-row:2;width:285px;max-width:100%;margin-top:-100px;min-width:0;min-height:0;box-sizing:border-box;transform:rotate(3deg);padding:16px;justify-self:end}
+.experience-hero .live-terminal{overflow-wrap:anywhere;font-size:10px}
+.experience-hero .visual>.scene-switcher{position:relative;inset:auto;grid-column:1/-1;grid-row:3;width:100%;min-width:0}
+@media(max-width:760px){
+.experience-hero .visual{grid-template-columns:72px minmax(0,1fr);gap:24px 16px;min-height:0;height:auto;transform:none;scale:1;padding:12px 0 20px}
+.experience-hero .visual>.stage-window{width:calc(100% - 16px);margin-left:8px;transform:rotate(-1.5deg);padding-bottom:64px}
+.experience-hero .visual>.logo-core{width:52px;height:52px;border-radius:14px;margin-top:-76px}
+.experience-hero .logo-core>img{width:40px;height:40px}
+.experience-hero .visual>.code-card{width:220px;margin-top:-76px;margin-right:6px;padding:12px}
+.experience-hero .live-terminal{font-size:10px;line-height:1.7}
+.experience-hero .scene-caption{line-height:1.6;padding:12px 16px}
+.experience-hero .scene-app{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px;gap:8px}
+.experience-hero .scene-app>div{min-width:0;padding:10px;overflow-wrap:anywhere}
+.experience-hero .scene-app strong{font-size:20px}
+}

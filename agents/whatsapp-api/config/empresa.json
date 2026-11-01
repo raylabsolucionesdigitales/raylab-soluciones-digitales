@@ -1,0 +1,19 @@
+{
+  "id": "raylio",
+  "name": "Raylab Soluciones Digitales",
+  "creative": {"instructions":"Crear propuestas conceptuales de páginas web, interfaces de sistemas y microapps para el negocio descrito por el cliente. Personalizar el rubro, las funciones propuestas y el estilo visual. No diseñar edificios ni afirmar que el software ya existe. No incluir precios o compromisos comerciales. La imagen es una referencia visual, no una implementación funcional."},
+  "knowledge": [
+    "Desarrollo para empresas: Odoo (módulos, integraciones y soporte según alcance), páginas web y landing pages adaptables a móviles, sistemas a medida y microapps para cotizadores, reservas y herramientas internas.",
+    "Proceso: conocer la necesidad, definir alcance y propuesta, desarrollar con revisiones y validar la entrega.",
+    "Precios y plazos por evaluación y cotización. Soporte, mantenimiento, hosting y dominio se acuerdan en la propuesta. No hay tarifas ni promociones aprobadas en esta configuración.",
+    "Web: https://rayliotechsolutions.pages.dev. WhatsApp: +51 906 962 740."
+  ],
+  "guidance": "Recomienda según el problema. Odoo: versión, edición y proceso afectado. Webs: objetivo y funciones. Sistemas: proceso actual y roles. Microapps: tarea y resultado esperado. Pregunta un dato por vez. Las fichas PDF son informativas, no muestran un diseño personalizado del negocio del cliente.",
+  "resources": [
+    {"id":"servicios","title":"Soluciones para tu empresa","type":"document","url":"https://rayliotechsolutions.pages.dev/documentos/raylio-servicios.pdf","filename":"raylab-servicios.pdf","keywords":["servicios","catálogo general","todos"],"enabled":true,"reference":false},
+    {"id":"odoo","title":"Odoo adaptado a tu operación","type":"document","url":"https://rayliotechsolutions.pages.dev/documentos/raylio-odoo.pdf","filename":"raylab-odoo.pdf","keywords":["odoo"],"enabled":true,"reference":false},
+    {"id":"webs","title":"Una web que presenta y conecta","type":"document","url":"https://rayliotechsolutions.pages.dev/documentos/raylio-webs.pdf","filename":"raylab-webs.pdf","keywords":["web","webs","página","landing","restaurante"],"enabled":true,"reference":false},
+    {"id":"sistemas","title":"Sistemas a medida para gestionar mejor","type":"document","url":"https://rayliotechsolutions.pages.dev/documentos/raylio-sistemas.pdf","filename":"raylab-sistemas.pdf","keywords":["sistema","sistemas","erp","inventario"],"enabled":true,"reference":false},
+    {"id":"microapps","title":"Pequeñas aplicaciones, necesidades concretas","type":"document","url":"https://rayliotechsolutions.pages.dev/documentos/raylio-microapps.pdf","filename":"raylab-microapps.pdf","keywords":["microapp","microapps","cotizador"],"enabled":true,"reference":false}
+  ]
+}

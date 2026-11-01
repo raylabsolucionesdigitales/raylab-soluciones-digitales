@@ -1,0 +1,34 @@
+/* Raylab motion: transform/opacity animations, activated only in view. */
+header{position:sticky;top:0;z-index:30;transition:background .3s,box-shadow .3s;isolation:isolate}header.is-scrolled{background:#100b20f2;box-shadow:0 12px 35px #07040e33;backdrop-filter:blur(16px)}
+.motion-toggle{border:1px solid #c4b5fd33;border-radius:20px;background:#8b5cf610;color:#c4b5fd;font:10px 'DM Sans',sans-serif;padding:8px 12px;cursor:pointer}.motion-toggle:hover{background:#8b5cf625}.motion-toggle:disabled{cursor:default;opacity:.75}
+.service{overflow:hidden}.service:after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(240px circle at var(--pointer-x,50%) var(--pointer-y,50%),#a78bfa13,transparent 75%);opacity:0;transition:opacity .3s}.service:hover:after{opacity:1}.service>a{position:relative;z-index:1}
+.button{position:relative;overflow:hidden}.button:after{content:'';position:absolute;width:45%;height:180%;top:-40%;left:-65%;background:linear-gradient(90deg,transparent,#ffffff20,transparent);transform:skewX(-20deg);pointer-events:none}.button:hover:after,.button:focus-visible:after{animation:raylab-sheen .75s ease-out}.button>span{transition:translate .25s}.button:hover>span{translate:3px -2px}
+.solution-tabs button{transition:background .25s,border-color .25s,color .25s,translate .25s}.solution-tabs button:hover{translate:0 -2px}.faq-list summary:after{transition:rotate .2s}.faq-list details[open] summary:after{rotate:180deg}.flow-pills span{transition:border-color .25s,background .25s}.flow-pills span:hover{border-color:#c4b5fd77;background:#8b5cf625}
+@keyframes raylab-float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes raylab-float-small{0%,100%{translate:0 0}50%{translate:0 -6px}}
+/* Transform fallback for Safari versions without individual translate support. */
+@keyframes raylab-float-legacy{0%,100%{transform:translateY(0) var(--float-base,rotate(0deg))}50%{transform:translateY(-10px) var(--float-base,rotate(0deg))}}
+@keyframes raylab-float-small-legacy{0%,100%{transform:translateY(0) var(--float-base,rotate(0deg))}50%{transform:translateY(-6px) var(--float-base,rotate(0deg))}}
+@keyframes raylab-pulse{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes raylab-signal{0%{left:0;opacity:0}15%{opacity:1}85%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes raylab-sheen{from{left:-65%}to{left:145%}}
+
+ body:not(.motion-paused) .visual.motion-in-view .logo-core{animation:raylab-float 6s ease-in-out infinite}
+ body:not(.motion-paused) .visual.motion-in-view .dashboard{animation:raylab-float-small 8s ease-in-out -2s infinite}
+ body:not(.motion-paused) .visual.motion-in-view .code-card{animation:raylab-float-small 7s ease-in-out -4s infinite}
+ body:not(.motion-paused) .visual.motion-in-view .floating-pill{animation:raylab-float-small 5s ease-in-out -1s infinite}
+ body:not(.motion-paused) .visual.motion-in-view .orbit{animation:raylab-pulse 7s ease-in-out infinite}
+ body:not(.motion-paused) .visual.motion-in-view .orbit-two{animation-delay:-3s}
+ body:not(.motion-paused) .connection-art.motion-in-view .connection-line:after{content:'';position:absolute;top:-2px;width:5px;height:5px;border-radius:50%;background:#ddd6fe;box-shadow:0 0 9px #c4b5fd;animation:raylab-signal 4s ease-in-out infinite}
+ body:not(.motion-paused) .connection-art.motion-in-view .line-b:after{animation-delay:-1.4s}
+ body:not(.motion-paused) .connection-art.motion-in-view .line-c:after{animation-delay:-2.8s}
+
+body.motion-paused *,body.motion-paused *:before,body.motion-paused *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(prefers-reduced-motion:reduce){body:not(.motion-override) *,body:not(.motion-override) *:before,body:not(.motion-override) *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:760px){header.is-scrolled{background:#100b20fa}}
+@supports not (translate:0 0){
+ 
+  body:not(.motion-paused) .visual.motion-in-view .logo-core{--float-base:rotate(-8deg);animation-name:raylab-float-legacy}
+  body:not(.motion-paused) .visual.motion-in-view .code-card{--float-base:rotate(3deg);animation-name:raylab-float-small-legacy}
+ 
+}

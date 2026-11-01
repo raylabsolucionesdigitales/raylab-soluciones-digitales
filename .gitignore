@@ -1,0 +1,36 @@
+# Private credentials and local environment files
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Dependencies, caches and local tools
+node_modules/
+.wrangler/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# Regenerable deliveries and browser test artifacts
+/output/
+*.zip
+
+# Old duplicate site and historical hosting metadata
+/sites/raylio/
+**/.openai/
+.local-backups/
+
+# Nested history is kept locally; the root repository tracks its current files.
+**/.git/

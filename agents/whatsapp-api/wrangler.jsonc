@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "raylio-whatsapp-agent",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-10-26",
+  "workers_dev": true,
+  "ai": { "binding": "AI" },
+  // Optional personalized generation: configure GENERATED_FILES (private R2),
+  // CREATIVE_LINK_SECRET, PUBLIC_WORKER_URL and CREATIVE_ENABLED in production.
+  // Add a Cron Trigger "* * * * *" only after migration-creativos.sql and bindings.
+  // Before accepting messages, create a D1 database and add its binding:
+  // Example entry: { "binding": "INBOX", "database_name": "raylio-whatsapp-inbox", "database_id": "ID_FROM_CLOUDFLARE" }
+  "d1_databases": []
+}
