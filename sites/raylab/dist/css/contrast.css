@@ -58,9 +58,9 @@ html[data-theme] .site-footer .footer-identity>p{border-left-color:var(--outline
 html[data-theme] .site-footer .back-to-top{border-color:var(--outline-visible)}
 
 /* Warm ivory daylight palette, with Raylab violet accents. */
-:root[data-theme=light]{--bg:#f3eee4;--panel:#faf6ee;--ui-surface:#faf6ee;--ui-card:#fffbf3;--ui-inset:#eee7dc;--ui-shadow:#66463112}
+:root[data-theme=light]{--bg:#eae1cf;--panel:#f4ecdd;--ui-surface:#f4ecdd;--ui-card:#faf3e6;--ui-inset:#e8dcc7;--ui-shadow:#66463112}
 html[data-theme=light] body{background:radial-gradient(ellipse at 78% 7%,#a687d010,transparent 28%),var(--bg)}
-html[data-theme=light] :is(.light-overview,.example-window,.glass){background:linear-gradient(140deg,#fffbf3,#f2eadd)}
-html[data-theme=light] :is(input,select,textarea,.scene-lane,.deal,.company-values>div){background:#fffbf3}
-html[data-theme=light] :is(.contact,.entry-offer,.company-purpose){background:linear-gradient(135deg,#faf6ee,#eee6db)}
+html[data-theme=light] :is(.light-overview,.example-window,.glass){background:linear-gradient(140deg,#faf3e6,#ecdfc9)}
+html[data-theme=light] :is(input,select,textarea,.scene-lane,.deal,.company-values>div){background:#faf3e6}
+html[data-theme=light] :is(.contact,.entry-offer,.company-purpose){background:linear-gradient(135deg,#f4ecdd,#e8dcc7)}
 html[data-theme=light] .legal-header{background:var(--bg)}
