@@ -58,9 +58,14 @@ html[data-theme] .site-footer .footer-identity>p{border-left-color:var(--outline
 html[data-theme] .site-footer .back-to-top{border-color:var(--outline-visible)}
 
 /* Warm ivory daylight palette, with Raylab violet accents. */
-:root[data-theme=light]{--bg:#eae1cf;--panel:#f4ecdd;--ui-surface:#f4ecdd;--ui-card:#faf3e6;--ui-inset:#e8dcc7;--ui-shadow:#66463112}
+:root[data-theme=light]{--bg:#f0eade;--panel:#f7f1e6;--ui-surface:#f7f1e6;--ui-card:#f9f4ea;--ui-inset:#ede4d5;--ui-shadow:#66463112}
 html[data-theme=light] body{background:radial-gradient(ellipse at 78% 7%,#a687d010,transparent 28%),var(--bg)}
-html[data-theme=light] :is(.light-overview,.example-window,.glass){background:linear-gradient(140deg,#faf3e6,#ecdfc9)}
-html[data-theme=light] :is(input,select,textarea,.scene-lane,.deal,.company-values>div){background:#faf3e6}
-html[data-theme=light] :is(.contact,.entry-offer,.company-purpose){background:linear-gradient(135deg,#f4ecdd,#e8dcc7)}
+html[data-theme=light] :is(.light-overview,.example-window,.glass){background:linear-gradient(140deg,var(--ui-card),var(--ui-inset))}
+html[data-theme=light] :is(input,select,textarea,.scene-lane,.deal,.company-values>div,.kanban>div,.scene-app,.lab-app,.overview-stats>div,.overview-chart,.theme-toggle){background:var(--ui-card)}
+html[data-theme=light] :is(.contact,.entry-offer,.company-purpose,.lab-section,.founder-card,.purpose-grid article,#servicios .service-odoo){background:linear-gradient(135deg,var(--ui-surface),var(--ui-inset))}
+html[data-theme=light] :is(.solution-tabs button,.copy-button,.hero .actions .text-link,.hero-tags span){background:var(--ui-surface)}
+html[data-theme=light] .solution-tabs button[aria-selected=true]{background:#e7dcec}
+html[data-theme=light] :is(.logo-core,.connection-center,.company-emblem>img){background:linear-gradient(140deg,var(--ui-card),var(--ui-inset))}
+html[data-theme=light] #navigation{background:var(--bg)}
+html[data-theme=light] :is(.flow-pills>span,.floating-pill,.node,.company-chip,.scene-ticket){background:var(--ui-inset)}
 html[data-theme=light] .legal-header{background:var(--bg)}
