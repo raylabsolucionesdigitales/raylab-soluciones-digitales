@@ -7,3 +7,12 @@ body:not(.motion-paused) .visual.motion-in-view .logo-core:before{animation:rayl
 @media(prefers-reduced-motion:reduce){body:not(.motion-override) .visual{rotate:none}body:not(.motion-override) .custom-service:hover{transform:none}}
 
 @media(hover:hover) and (pointer:fine){.capability-strip:hover .marquee-track{animation-play-state:paused}}
+/* Seamless ribbon: readable at every viewport width. */
+html[data-theme] .capability-strip.is-marquee{padding:17px 0;background:linear-gradient(90deg,#8b5cf608,#8b5cf619,#8b5cf608);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+.marquee-track{align-items:center;animation-duration:var(--marquee-duration,40s)!important;will-change:transform}
+.marquee-group{display:flex;align-items:center;flex-shrink:0}
+.marquee-group>span{display:inline-flex;align-items:center;gap:14px;padding:0 32px;white-space:nowrap;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:500;letter-spacing:-.2px;color:var(--text)}
+.marquee-group>span:after{content:'+';margin-left:32px;color:#a77ae9;font-size:18px;font-weight:400}
+.marquee-group svg{width:30px;height:30px;padding:5px;flex-shrink:0;color:#b185ff;background:#8b5cf619;border-radius:9px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+[data-theme=light] .marquee-group svg{color:#7837db;background:#8b5cf616}
+@media(max-width:760px){html[data-theme] .capability-strip.is-marquee{padding:14px 0}.marquee-group>span{font-size:14px;padding:0 20px;gap:10px}.marquee-group>span:after{margin-left:20px}.marquee-group svg{width:28px;height:28px}}

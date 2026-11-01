@@ -205,3 +205,8 @@
  .growth-badge{font-size:11px;padding:4px 6px}.growth-badge small{font-size:5px}
  .overview-demo-note{margin-top:8px}
 }
+:root[data-theme=dark] main h2>em,:root[data-theme=dark] main h2>span{color:#b17aff;-webkit-text-fill-color:#b17aff;font-style:normal;background:none}
+[data-theme] body>header{width:100%;max-width:none;padding-inline:max(48px,calc((100% - 1564px)/2));background:var(--bg)}
+[data-theme] body>header.is-scrolled{background:var(--bg);box-shadow:none;backdrop-filter:none;border-bottom:0}
+@media(max-width:760px){[data-theme] body>header{padding-inline:20px}}
+@media(max-width:360px){[data-theme] body>header{padding-inline:16px}}

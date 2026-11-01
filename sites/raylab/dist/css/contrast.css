@@ -1,0 +1,71 @@
+/* Light diagram details; common outlines for all pages follow below. */
+:root[data-theme=light]{--ui-border:#bea0e0;--line:rgba(111,66,166,.32)}
+
+[data-theme=light] :is(.service,.custom-service,.entry-offer,.purpose-grid article,.founder-card,.contact,.lab-section,.example-window,.lab-app,.notice){border-color:#bea0e0}
+[data-theme=light] #servicios .service-odoo{border-color:#bea0e0}
+[data-theme=light] :is(input,select,textarea){border-color:#b79ad6}
+[data-theme=light] :is(.scene-switcher button,.service-filters button,.solution-tabs button,.copy-button){border-color:#b99cdd}
+
+[data-theme=light] .connection-art{
+  border:2px solid #b28bdc;
+  background-color:#f4edff;
+  background-image:radial-gradient(#b79adc66 1px,transparent 1px);
+  box-shadow:0 12px 32px #7543a710,inset 0 1px 0 #fff;
+}
+[data-theme=light] .connection-art .node{
+  border:1.5px solid #b18ad8;
+  background:linear-gradient(145deg,#fff,#e9dcfa);
+  color:#7942bc;
+  box-shadow:0 5px 14px #6f3ca613;
+}
+[data-theme=light] .connection-art .node span{color:#51336e}
+[data-theme=light] .connection-art .connection-center{
+  border:1.5px solid #a77ad4;
+  background:linear-gradient(145deg,#fff,#e9dcfa);
+  box-shadow:0 8px 28px #7744ae25;
+}
+[data-theme=light] .connection-art .connection-line{
+  height:2px;
+  background:linear-gradient(90deg,#aa7ad4,#8551b9);
+}
+body:not(.motion-paused) [data-theme=light] .connection-art .connection-line:after,
+[data-theme=light] body:not(.motion-paused) .connection-art.motion-in-view .connection-line:after{
+  background:#7c3aed;box-shadow:0 0 8px #9354dc88;
+}
+
+/* Shared contrast for structural lines across light/dark and legal pages. */
+:root[data-theme=light]{--outline-visible:#9b73c8;--outline-focus:#7841ba;--ui-border:#ac88d4;--line:#ad8bd2}
+:root[data-theme=dark]{--outline-visible:#785c99;--outline-focus:#b48ae8;--ui-border:#73568e;--line:#70548b}
+html[data-theme] :is(
+  .faq-list details,.faq-list,.steps article,.company-values>div,.collaboration-grid article,
+  .solution-tabs,.task-filters,.task-list li,.stage-toolbar,.scene-caption,.scene-table th,.scene-table td,
+  .overview-chart,.overview-stats>div,.overview-highlights>div,.overview-sidebar,
+  .preview-web-nav,.preview-web-features>span,.inventory-row,.quote-field,.quote-summary,
+  .personal-services .custom-service,.service,.entry-offer,.purpose-grid article,.founder-card,
+  .contact,.lab-section,.example-window,.lab-app,.notice,.company-chip,.floating-pill,
+  .connection-art,.connection-art .node,.connection-center,.company-emblem>img,
+  .scene-lane,.scene-app,.scene-ticket,.deal,.glass,.stage-window
+){border-color:var(--outline-visible)}
+html[data-theme] :is(.contact,.lab-section,.notice,.connection-art,.example-window){border-width:1.5px}
+html[data-theme] .faq-list details{border-color:var(--outline-visible)}
+html[data-theme] .faq-list summary:after{color:var(--outline-focus)}
+html[data-theme] .faq-list details[open]{border-color:var(--outline-focus)}
+html[data-theme] :is(input,select,textarea,.menu,.theme-toggle,.solution-tabs button,.scene-switcher button,.service-filters button,.copy-button){border-color:var(--outline-visible)}
+html[data-theme] :is(.solution-tabs button[aria-selected=true],.scene-switcher button[aria-pressed=true],.service-filters button[aria-pressed=true]){border-color:var(--outline-focus)}
+html[data-theme] :is(input,select,textarea):focus-visible{border-color:var(--outline-focus)}
+html[data-theme] :is(.site-footer,.site-footer .footer-bottom,.legal-header,footer,.capability-strip){border-color:var(--outline-visible)}
+html[data-theme] .site-footer .footer-identity>p{border-left-color:var(--outline-visible)}
+html[data-theme] .site-footer .back-to-top{border-color:var(--outline-visible)}
+
+/* Warm ivory daylight palette, with Raylab violet accents. */
+:root[data-theme=light]{--bg:#f0eade;--panel:#f7f1e6;--ui-surface:#f7f1e6;--ui-card:#f9f4ea;--ui-inset:#ede4d5;--ui-shadow:#66463112}
+html[data-theme=light] body{background:radial-gradient(ellipse at 78% 7%,#a687d010,transparent 28%),var(--bg)}
+html[data-theme=light] :is(.light-overview,.example-window,.glass){background:linear-gradient(140deg,var(--ui-card),var(--ui-inset))}
+html[data-theme=light] :is(input,select,textarea,.scene-lane,.deal,.company-values>div,.kanban>div,.scene-app,.lab-app,.overview-stats>div,.overview-chart,.theme-toggle){background:var(--ui-card)}
+html[data-theme=light] :is(.contact,.entry-offer,.company-purpose,.lab-section,.founder-card,.purpose-grid article,#servicios .service-odoo){background:linear-gradient(135deg,var(--ui-surface),var(--ui-inset))}
+html[data-theme=light] :is(.solution-tabs button,.copy-button,.hero .actions .text-link,.hero-tags span){background:var(--ui-surface)}
+html[data-theme=light] .solution-tabs button[aria-selected=true]{background:#e7dcec}
+html[data-theme=light] :is(.logo-core,.connection-center,.company-emblem>img){background:linear-gradient(140deg,var(--ui-card),var(--ui-inset))}
+html[data-theme=light] #navigation{background:var(--bg)}
+html[data-theme=light] :is(.flow-pills>span,.floating-pill,.node,.company-chip,.scene-ticket){background:var(--ui-inset)}
+html[data-theme=light] .legal-header{background:var(--bg)}

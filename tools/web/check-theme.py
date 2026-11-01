@@ -104,7 +104,7 @@ try:
     driver.execute_cdp_cmd('Emulation.setDeviceMetricsOverride', {'width':1440,'height':1000,'deviceScaleFactor':1,'mobile':False})
     if driver.execute_script('return document.documentElement.dataset.theme') != 'light':
         driver.find_element('css selector','.theme-toggle').click()
-    for anchor in ('servicios','contacto'):
+    for anchor in ('servicios','conexion','preguntas','contacto'):
         driver.execute_script('document.getElementById(arguments[0]).scrollIntoView({behavior:"instant"})',anchor)
         time.sleep(.7)
         driver.save_screenshot(str(out / f'raylab-light-{anchor}.png'))

@@ -20,7 +20,7 @@ def lettering(text, size, x, baseline, spacing, color):
     return ''.join(result)
 source = ET.parse(root / 'img/logo.svg').getroot()
 symbol = ''.join(ET.tostring(child, encoding='unicode') for child in source if child.tag.split('}')[-1] in ('defs','path','image'))
-for theme, color, subtitle in [('dark','#f8f7ff','#c4b5fd'),('light','#20132f','#7846cc')]:
+for theme, color, subtitle in [('dark','#f8f7ff','#ffffff'),('light','#20132f','#000000')]:
     svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 65" role="img" aria-label="Raylab Soluciones Digitales">'
     svg += f'<g transform="translate(0 11) scale(.071)">{symbol}</g>'
     svg += lettering('RAYLAB',28,55,39,1,color)
