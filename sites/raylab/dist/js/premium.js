@@ -4,7 +4,27 @@
  const hero=document.querySelector('.hero');if(!hero)return;
  const visual=document.querySelector('.visual');
  const strip=document.querySelector('.capability-strip');
- if(strip){const items=[...strip.children];const track=document.createElement('div');track.className='marquee-track';items.forEach(item=>track.append(item));items.forEach(item=>{const clone=item.cloneNode(true);clone.setAttribute('aria-hidden','true');track.append(clone)});strip.append(track);strip.classList.add('is-marquee')}
+ if(strip){
+  const items=[...strip.children];
+  const paths=['M4 17v-4h3v4M10 17V9h3v8M16 17V4h3v13','m5 16 9-9 3 3-9 9H5v-3Zm7-7 3 3M4 4h4M6 2v4','M8 7h8M8 17h8M7 8v8M17 8v8M4 4h6v6H4zM14 14h6v6h-6z','m13 2-8 12h6l-1 8 9-13h-6l1-7Z'];
+  items.forEach((item,index)=>{const icon=document.createElementNS('http://www.w3.org/2000/svg','svg');icon.setAttribute('viewBox','0 0 24 24');icon.setAttribute('aria-hidden','true');icon.innerHTML=`<path d="${paths[index%paths.length]}"/>`;item.prepend(icon)});
+  strip.replaceChildren();strip.classList.add('is-marquee');
+  const track=document.createElement('div');track.className='marquee-track';strip.append(track);
+  function fillStrip(){
+   const group=document.createElement('div');group.className='marquee-group';
+   items.forEach(item=>group.append(item));track.replaceChildren(group);
+   // One complete group always spans the viewport, even on ultrawide screens.
+   const minimum=strip.clientWidth+240;let copies=0;
+   while(group.getBoundingClientRect().width<minimum&&copies++<30){items.forEach(item=>{const copy=item.cloneNode(true);copy.setAttribute('aria-hidden','true');group.append(copy)})}
+   const width=group.getBoundingClientRect().width;
+   const duplicate=group.cloneNode(true);duplicate.setAttribute('aria-hidden','true');track.append(duplicate);
+   track.style.setProperty('--marquee-duration',`${Math.max(24,width/42)}s`);
+  }
+  fillStrip();let resizeFrame;
+  const refresh=()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(fillStrip)};
+  if('ResizeObserver'in window)new ResizeObserver(refresh).observe(strip);else window.addEventListener('resize',refresh);
+  document.fonts?.ready.then(refresh);
+ }
  if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('motion-in-view',entry.isIntersecting)),{threshold:.05});[hero,strip].filter(Boolean).forEach(el=>observer.observe(el))}
  else [hero,strip].filter(Boolean).forEach(el=>el.classList.add('motion-in-view'));
  const canvas=document.createElement('canvas');canvas.className='network-canvas';canvas.setAttribute('aria-hidden','true');hero.prepend(canvas);const ctx=canvas.getContext('2d');
