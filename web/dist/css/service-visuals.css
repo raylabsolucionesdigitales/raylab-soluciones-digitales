@@ -1,0 +1,10 @@
+.service-artwork{margin:0 0 64px;max-width:100%;isolation:isolate}
+.service-artwork-scene{position:relative;overflow:hidden;border-radius:0;background:transparent}
+.service-artwork-image{display:block;width:100%;height:auto;object-fit:contain}
+.service-artwork-brands,.service-artwork>figcaption{display:none}
+@media(max-width:600px){.service-artwork{margin-bottom:40px}}
+.service-artwork-image{transform:translate(var(--art-x,0px),var(--art-y,0px)) scale(1.025);transition:transform .65s cubic-bezier(.22,1,.36,1)}
+@media(hover:hover) and (pointer:fine){.service-artwork-scene:hover .service-artwork-image{transform:translate(var(--art-x,0px),var(--art-y,0px)) scale(1.045)}}
+.service-deliverables article{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+@media(hover:hover){.service-deliverables article:hover{transform:translateY(-6px);box-shadow:0 14px 35px #7841cf18;border-color:#a56df0}}
+@media(prefers-reduced-motion:reduce){.service-artwork-image{transform:none!important;transition:none}.service-deliverables article{transition:none}.service-deliverables article:hover{transform:none}}

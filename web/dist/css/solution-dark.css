@@ -1,0 +1,119 @@
+/* Keep the product demonstrations dark in both page themes. */
+.campaign-story .campaign-bridge{display:none}
+html[data-theme] .solution-panel :is(.campaign-story,.automation-story){
+  --text:#f4effa;
+  --muted:#bfb5ce;
+  color:#f4effa;
+  background:radial-gradient(ellipse at top right,#8049db24,transparent 65%),linear-gradient(145deg,#1c1823,#100e15);
+  border:1px solid #a980d642;
+  border-radius:20px;
+  box-shadow:0 20px 45px #10091f26;
+  padding:24px;
+  min-width:0;
+}
+html[data-theme] .campaign-story :is(.campaign-ad-brand,.campaign-contact,.campaign-confirm,.campaign-journey>span,.campaign-insight p),
+html[data-theme] .automation-story :is(.solution-preview-label,.automation-chat,.automation-document,.automation-handoff){color:#f4effa}
+html[data-theme] .campaign-story :is(.campaign-ad-brand small,.campaign-contact small,.campaign-confirm small,.campaign-journey small,.campaign-insight small,.campaign-story-heading small),
+html[data-theme] .automation-story :is(small,.automation-caption){color:#bfb5ce;opacity:1}
+html[data-theme] .campaign-story .campaign-ad{background:#211b2b;box-shadow:0 18px 40px #0004}
+html[data-theme] .campaign-story .campaign-ad-bottom strong{color:#f4effa}
+html[data-theme] .campaign-story .campaign-ad-bottom>span{color:#d0adff}
+html[data-theme] .campaign-story .campaign-answer{background:#30273d;color:#f4effa}
+html[data-theme] .campaign-story .campaign-question{background:#743ab9;color:#fff}
+html[data-theme] .automation-story .automation-chat{background:#19151f;border-color:#ad80e045;box-shadow:0 18px 40px #0003}
+html[data-theme] .automation-story .automation-answer{background:#30273d;color:#f4effa}
+html[data-theme] .automation-story .automation-question{background:#743ab9;color:#fff}
+html[data-theme] .automation-story .automation-document{background:#a979ed10;border-color:#a979ed35}
+html[data-theme] .automation-story :is(.document-symbol,.handoff-avatar){background:#a979ed24;color:#d1b2ff}
+html[data-theme] .automation-story .automation-handoff{background:#38c99a09;border-color:#38c99a25}
+/* The CRM follows the same device-like dark surface. */
+html[data-theme] #panel-odoo .operations-story{--ops-muted:#bfb5ce;--ops-line:#b799e630;color:#f4effa;background:radial-gradient(ellipse at top right,#8049db24,transparent 65%),linear-gradient(145deg,#1c1823,#100e15);box-shadow:0 20px 45px #10091f26}
+html[data-theme] #panel-odoo .operations-workspace{background:#19151f;box-shadow:0 12px 30px #0003}
+html[data-theme] #panel-odoo .operations-opportunity{background:linear-gradient(135deg,#282131,#201b28)}
+html[data-theme] #panel-odoo :is(.ops-priority,.operations-stages .is-current,.ops-record,.opportunity-avatar,.ops-fields i){color:#d1b2ff}
+html[data-theme] #panel-odoo .ops-task-status{color:#dac098}
+html[data-theme] #panel-odoo .operations-odoo{color:#c49bc8}
+@media(max-width:600px){html[data-theme] .solution-panel :is(.campaign-story,.automation-story){padding:16px 12px;border-radius:16px}.campaign-stage{gap:20px}.campaign-art>span{font-size:24px}.campaign-journey{gap:8px}}
+
+/* On phones the demonstrations read vertically, at a readable size. */
+@media(max-width:600px){
+  html[data-theme] .solution-panel{padding:20px 14px;gap:26px;overflow:visible}
+  .solution-panel *, .solution-panel *:before,.solution-panel *:after{box-sizing:border-box}
+  .solution-panel :is(.solution-copy,.campaign-conversation,.automation-messages,.operations-story){min-width:0}
+  html[data-theme] .solution-copy h3{font-size:clamp(25px,6.7vw,32px);overflow-wrap:break-word}
+  html[data-theme] .solution-copy .button{white-space:normal;text-align:left;line-height:1.5;padding:14px 16px}
+  html[data-theme] .flow-pills{gap:7px}
+  html[data-theme] .flow-pills span{font-size:11px}
+  .campaign-story-heading,.solution-preview-label{flex-wrap:wrap;align-items:flex-start;gap:8px;font-size:12px;line-height:1.5}
+  .campaign-story-heading small,.solution-preview-label>span{font-size:10px}
+  .campaign-stage{grid-template-columns:minmax(0,1fr);max-width:none;margin:0;gap:22px;padding-bottom:24px}
+  html[data-theme] .campaign-story .campaign-ad{transform:none;width:100%;max-width:none}
+  .campaign-story:hover .campaign-ad{transform:none}
+  .campaign-ad-brand{padding:12px;font-size:12px}
+  .campaign-ad-brand small{font-size:10px}
+  .campaign-art{min-height:155px;padding:24px 18px}
+  .campaign-art>span{font-size:30px}
+  .campaign-ad-bottom{padding:13px;font-size:12px}
+  .campaign-ad-bottom>span{font-size:11px}
+  .campaign-conversation{transform:none;margin:0;padding:0}
+  .campaign-contact{font-size:12px;gap:10px}
+  .campaign-contact small{font-size:11px}
+  .campaign-conversation p{font-size:12px;padding:12px;line-height:1.7;margin-top:14px}
+  .campaign-question{margin-left:12px!important}
+  .campaign-answer{margin-right:12px!important}
+  .campaign-confirm{font-size:12px}
+  .campaign-confirm small{font-size:11px}
+  .campaign-journey{grid-template-columns:1fr;gap:16px;padding-top:20px}
+  .campaign-journey>span{display:grid;grid-template-columns:25px 1fr;font-size:12px;align-items:baseline}
+  .campaign-journey b{font-size:10px;margin:0;grid-row:span 2}
+  .campaign-journey small{font-size:11px;margin-top:4px}
+  .campaign-insight p{font-size:12px}.campaign-insight small{font-size:11px}
+  .automation-chat>header{padding:14px 12px;font-size:13px;gap:8px}
+  .automation-chat>header img{width:27px;height:27px;flex:none}
+  .automation-chat header>div{min-width:0}
+  .automation-chat small{font-size:11px}
+  .automation-messages{padding:14px 12px;gap:14px}
+  .automation-messages p{max-width:95%;font-size:12px;padding:12px;overflow-wrap:break-word}
+  .automation-document{width:100%;min-width:0;gap:8px;padding:10px;font-size:12px}
+  .automation-document>div{min-width:0;overflow-wrap:break-word}
+  .document-symbol{padding:10px 6px;flex:none}
+  .document-check{margin-left:auto;flex:none}
+  .automation-handoff{padding:14px 12px;gap:8px;font-size:12px}
+  .automation-handoff>div{min-width:0}
+  .automation-caption{flex-wrap:wrap;gap:6px;font-size:11px;line-height:1.6;text-align:center}
+  html[data-theme] #panel-odoo .operations-story{padding:14px 10px;overflow:visible}
+  #panel-odoo .solution-preview-label{flex-wrap:wrap}
+  #panel-odoo .solution-preview-label strong{font-size:19px}
+  .ops-eyebrow{font-size:10px;letter-spacing:1px}
+  #panel-odoo .ops-demo{font-size:10px}
+  #panel-odoo .operations-source{font-size:12px;gap:8px;padding:12px 10px}
+  #panel-odoo .operations-source>div{min-width:0}
+  #panel-odoo .operations-story small{font-size:11px;line-height:1.6}
+  #panel-odoo .operations-source-check{flex:none}
+  #panel-odoo .operations-transfer{gap:6px;height:auto;padding:15px 0}
+  #panel-odoo .operations-transfer>span{font-size:10px;text-align:center}
+  #panel-odoo .operations-transfer .ops-transfer-line{width:15px;flex:none}
+  #panel-odoo .operations-workspace>header{flex-wrap:wrap;gap:10px;font-size:13px;padding:14px 12px}
+  #panel-odoo .operations-live{font-size:10px;margin-left:0}
+  .ops-workspace-bar{font-size:11px;padding:14px 12px 0}
+  #panel-odoo .operations-stages{grid-template-columns:1fr;padding:12px 10px 0;gap:5px;font-size:11px}
+  #panel-odoo .operations-stages>span{justify-content:flex-start;padding:9px 10px;white-space:normal;border-radius:5px}
+  .operations-stages b{font-size:10px;margin-left:auto}
+  #panel-odoo .operations-opportunity{padding:12px;margin:12px 10px}
+  #panel-odoo .opportunity-top{flex-wrap:wrap;font-size:10px;gap:8px}
+  .ops-record{letter-spacing:.5px}
+  #panel-odoo .operations-opportunity h4{font-size:20px;overflow-wrap:break-word}
+  #panel-odoo .operations-opportunity p{font-size:12px}
+  .ops-contact{font-size:12px;gap:8px}.ops-contact>div{min-width:0}
+  .ops-fields{grid-template-columns:1fr;gap:15px;padding:15px 0}
+  .ops-fields>div>span{font-size:11px}.ops-fields strong{font-size:12px}
+  #panel-odoo .operations-opportunity footer{flex-wrap:wrap}
+  #panel-odoo footer small{font-size:9px;letter-spacing:.5px}
+  #panel-odoo footer b{font-size:12px}
+  .ops-task-status{font-size:10px;margin-left:0}
+  .ops-workspace-footer{flex-direction:column;gap:6px;font-size:10px;padding:12px}
+  #panel-odoo .operations-outcome{font-size:12px;align-items:flex-start;gap:8px}
+  html[data-theme] #panel-odoo .ops-flow{gap:6px}
+  html[data-theme] #panel-odoo .ops-flow span{font-size:11px;white-space:normal}
+  .example-disclaimer{line-height:1.7}
+}

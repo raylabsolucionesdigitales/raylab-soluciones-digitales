@@ -1,0 +1,29 @@
+/* One appearance button, aligned with the header on every page. */
+html[data-theme] header>.theme-mode-control{position:static!important;inset:auto!important;transform:none;width:44px;height:44px;margin:0;flex:0 0 44px;}
+html[data-theme] header .theme-mode-control .theme-mode-switch{display:flex;align-items:center;justify-content:center;width:44px;height:44px;min-height:44px;padding:0;gap:0;border:1px solid var(--component-divider,#9e78ca45);border-radius:12px;background:transparent;color:var(--text);box-sizing:border-box;cursor:pointer;}
+html[data-theme] header .theme-mode-switch .theme-control-icon{display:none;width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+html[data-theme=dark] header .theme-mode-switch .service-theme-sun,html[data-theme=light] header .theme-mode-switch .service-theme-moon{display:block;}
+html[data-theme] header .theme-mode-switch:hover{background:#9659ff14;}
+html[data-theme] header .theme-mode-switch:focus-visible{outline:2px solid #a56bff;outline-offset:4px;}
+html[data-theme] body>header:not(.legal-header){display:grid!important;grid-template-columns:auto minmax(0,1fr) auto 44px;align-items:center;gap:24px;height:96px;padding:0 max(24px,calc((100% - 1360px)/2));box-sizing:border-box;}
+html[data-theme] body>header:not(.legal-header)>.brand{grid-column:1;grid-row:1;margin:0;min-width:0;}
+html[data-theme] body>header:not(.legal-header)>#navigation{grid-column:2;grid-row:1;display:flex;justify-content:flex-end;align-items:center;gap:24px;position:static;width:auto;margin:0;padding:0;font-size:13px;}
+html[data-theme] body>header:not(.legal-header)>.compact{grid-column:3;grid-row:1;white-space:nowrap;margin:0;min-height:44px;padding:12px 20px;}
+html[data-theme] body>header:not(.legal-header)>.theme-mode-control{grid-column:4;grid-row:1;width:44px;height:44px;}
+html[data-theme] body>header:not(.legal-header)>.menu{display:none;}
+html[data-theme] header #navigation .service-mobile-contact{display:none;}
+@media(min-width:1101px){html[data-theme] body>header:not(.legal-header)>#navigation{background:transparent;border:0;box-shadow:none;}}
+@media(max-width:1100px){
+ html[data-theme] body>header:not(.legal-header){grid-template-columns:minmax(0,1fr) 44px 44px;gap:8px;height:76px;padding:0 16px;}
+ html[data-theme] body>header:not(.legal-header)>.brand{gap:8px;}
+ html[data-theme] body>header:not(.legal-header)>.brand img{width:32px;height:36px;flex:none;}
+ html[data-theme] body>header:not(.legal-header)>.brand>span{font-size:20px;}
+ html[data-theme] body>header:not(.legal-header)>.brand small{font-size:5px;letter-spacing:1.4px;}
+ html[data-theme] body>header:not(.legal-header)>.compact{display:none;}
+ html[data-theme] body>header:not(.legal-header)>.theme-mode-control{grid-column:2;}
+ html[data-theme] body>header:not(.legal-header)>.menu{grid-column:3;grid-row:1;display:flex;align-items:center;justify-content:center;width:44px;min-width:44px;height:44px;margin:0;padding:0;border:1px solid var(--component-divider,#9e78ca45);border-radius:12px;background:transparent;color:var(--text);font-size:20px;line-height:1;box-sizing:border-box;}
+ html[data-theme] body>header:not(.legal-header)>#navigation{display:none;position:absolute;grid-area:auto;top:76px;left:16px;right:16px;width:auto;min-width:0;max-width:none;margin:0;box-sizing:border-box;transform:none;translate:none;max-height:calc(100dvh - 94px);padding:12px;border:1px solid var(--component-divider,#9e78ca45);border-radius:16px;background:var(--bg);overflow-y:auto;box-shadow:0 16px 40px #0003;}
+ html[data-theme] body>header:not(.legal-header)>#navigation.open{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;}
+ html[data-theme] body>header:not(.legal-header)>#navigation a{display:block;width:100%;min-width:0;flex-shrink:0;white-space:normal;overflow-wrap:break-word;padding:13px 14px;min-height:44px;border-radius:9px;box-sizing:border-box;}
+ html[data-theme] body>header:not(.legal-header)>#navigation .service-mobile-contact{display:block;background:linear-gradient(110deg,#8b5cf6,#7c3aed);color:#fff;margin-top:8px;text-align:center;}
+}
