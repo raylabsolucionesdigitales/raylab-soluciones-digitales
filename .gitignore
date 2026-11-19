@@ -17,20 +17,21 @@ __pycache__/
 *.pyc
 .venv/
 venv/
-.vscode/
+.vscode/*
+!.vscode/settings.json
 .idea/
 .DS_Store
 Thumbs.db
 *.log
 
 # Regenerable deliveries and browser test artifacts
-/output/
+/entregas/
 *.zip
 
-# Old duplicate site and historical hosting metadata
-/sites/raylio/
+# Historical hosting metadata and archived material
 **/.openai/
 .local-backups/
+/archivo/
 
 # Nested history is kept locally; the root repository tracks its current files.
 **/.git/

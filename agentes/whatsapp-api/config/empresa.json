@@ -1,0 +1,83 @@
+{
+  "id": "raylio",
+  "name": "Raylab Soluciones Digitales",
+  "creative": {
+    "instructions": "Crear propuestas conceptuales de páginas web, interfaces de sistemas y microapps para el negocio descrito por el cliente. Personalizar el rubro, las funciones propuestas y el estilo visual. No diseñar edificios ni afirmar que el software ya existe. No incluir precios o compromisos comerciales. La imagen es una referencia visual, no una implementación funcional."
+  },
+  "knowledge": [
+    "Empresa: Raylab Soluciones Digitales. Agencia de soluciones digitales para negocios. El asistente es exclusivamente informativo y comercial.",
+    "Servicios aprobados: implementación y personalización de Odoo ERP; diseño y desarrollo de páginas web; agentes inteligentes de WhatsApp; desarrollo de microapps; Meta Ads y Google Ads; analítica y medición digital; soluciones NFC.",
+    "Odoo organiza procesos empresariales e integra información. Las páginas web presentan el negocio y facilitan el contacto. Los agentes de WhatsApp informan y comparten documentos autorizados. Las microapps se enfocan en una tarea concreta. La publicidad conecta ofertas con audiencias. La analítica mide acciones digitales. NFC facilita compartir contacto o enlaces en dispositivos compatibles.",
+    "El catálogo presenta capacidades, no paquetes de precio fijo. Alcance, entregables, precio, plazo, mantenimiento, hosting, dominio, licencias y costos de proveedores se acuerdan en una propuesta humana. No hay descuentos, tarifas ni tiempos de respuesta aprobados.",
+    "Contacto: contacto.raylab@gmail.com. WhatsApp comercial: +51 906 962 740. Web: https://raylabsolucionesdigitales.pages.dev. Guía de cotización: https://raylabsolucionesdigitales.pages.dev/comercial/cotizacion.html. Contacto por WhatsApp: https://wa.me/51906962740.",
+    "No hay horarios, dirección física, certificaciones ni compromisos de resultados confirmados en esta configuración. El asistente no diagnostica problemas, no brinda soporte técnico ni instrucciones para resolverlos, no accede a sistemas y no genera diseños personalizados."
+  ],
+  "guidance": "Explica los servicios sin asesoría técnica particular. Pregunta un dato breve por vez y utiliza lo ya compartido. Si piden cotizar, recoge servicio y necesidad, sin prometer precio ni fecha. Si piden una persona, facilita el contacto y respeta la pausa real del canal; no afirmes haber notificado ni transferido a un asesor. Los documentos solo se comparten cuando se solicitan.",
+  "resources": [
+    {
+      "id": "servicios",
+      "title": "Catálogo de servicios — Raylab Soluciones Digitales",
+      "type": "document",
+      "url": "https://raylabsolucionesdigitales.pages.dev/documentos/raylab-catalogo.pdf",
+      "filename": "raylab-catalogo.pdf",
+      "keywords": [
+        "catálogo",
+        "servicios",
+        "todos",
+        "brochure"
+      ],
+      "enabled": true,
+      "reference": false,
+      "general": true
+    },
+    {
+      "id": "odoo",
+      "title": "Odoo adaptado a tu operación",
+      "type": "document",
+      "url": "https://raylabsolucionesdigitales.pages.dev/documentos/raylab-odoo.pdf",
+      "filename": "raylab-odoo.pdf",
+      "keywords": [
+        "odoo"
+      ],
+      "enabled": true,
+      "reference": false
+    },
+    {
+      "id": "webs",
+      "title": "Una web que presenta y conecta",
+      "type": "document",
+      "url": "https://raylabsolucionesdigitales.pages.dev/documentos/raylab-webs.pdf",
+      "filename": "raylab-webs.pdf",
+      "keywords": [
+        "web",
+        "webs",
+        "página",
+        "landing",
+        "restaurante"
+      ],
+      "enabled": true,
+      "reference": false
+    },
+    {
+      "id": "microapps",
+      "title": "Pequeñas aplicaciones, necesidades concretas",
+      "type": "document",
+      "url": "https://raylabsolucionesdigitales.pages.dev/documentos/raylab-microapps.pdf",
+      "filename": "raylab-microapps.pdf",
+      "keywords": [
+        "microapp",
+        "microapps",
+        "cotizador"
+      ],
+      "enabled": true,
+      "reference": false
+    }
+  ],
+  "mode": "informational",
+  "skills": [
+    "informar-servicios",
+    "compartir-documentos",
+    "recoger-consulta",
+    "atencion-humana"
+  ]
+}

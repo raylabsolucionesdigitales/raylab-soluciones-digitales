@@ -1,64 +1,52 @@
 # Raylab Soluciones Digitales
 
-Web de la agencia, identidad visual y agente de WhatsApp.
+Proyecto de la agencia: página web, agente de WhatsApp, identidad visual, herramientas y entregas. Abre esta carpeta directamente en VS Code.
 
-Para guardar el proyecto en GitHub, sigue [estos pasos](docs/GITHUB.md). El repositorio general está en esta carpeta raíz.
-
-| Carpeta | Contenido |
+| Carpeta | Qué contiene |
 | --- | --- |
-| `sites/raylab/dist/` | Web, estilos, animaciones, documentos públicos y editor local. |
-| `agents/whatsapp-api/` | Agente, configuración comercial, catálogos, migraciones y pruebas. |
-| `branding/` | Logo original en alta resolución para redes y otras piezas. |
-| `docs/` | Manual, temas de la web y revisión de seguridad. |
-| `tools/web/` | Empaquetador, generador del logo completo y comprobación visual. |
-| `output/raylab/` | ZIP actual de la web, listo para subir. |
+| **web/** | Sitio de Raylab. Abre `dist/index.html`. |
+| **agentes/** | Agente de WhatsApp: `whatsapp-api/`. |
+| **marca/** | Logo original y recursos de identidad. |
+| **documentacion/** | Mapa del proyecto, manuales y referencias. |
+| **herramientas/** | Generadores, optimización, pruebas y empaquetado. |
+| **entregas/** | ZIP para Cloudflare, catálogo PDF y evidencias. |
 
-Los nombres internos `raylab` se conservan para no romper rutas ni configuraciones. La marca actual es Raylab.
+## Archivos principales
 
-La web está agrupada por tipo de archivo:
+- [Página web](web/dist/index.html)
+- [Formulario de cotización](web/dist/comercial/cotizacion.html)
+- [Catálogo](web/dist/comercial/catalogo.html)
+- [Código del agente](agentes/whatsapp-api/src/worker.mjs)
+- [Configuración del agente](agentes/whatsapp-api/config/empresa.json)
+- [Manual del agente](agentes/whatsapp-api/README.md)
+- [Mapa de carpetas](documentacion/ESTRUCTURA-DEL-PROYECTO.md)
 
-```text
-sites/raylab/dist/
-  index.html, admin.html, privacidad.html, eliminacion-datos.html, 404.html
-  css/          Estilos
-  js/           JavaScript y datos de servicios
-  img/          Logos e imágenes web
-  documentos/   PDF públicos
-  _headers      Cabeceras del hosting
-```
+## Preparar la web para Cloudflare Pages
 
-Para cambiar servicios manualmente, edita `sites/raylab/dist/js/services-data.js`. Los estilos están en `css/`; las imágenes usadas por CSS se resuelven mediante `../img/`. El editor exporta el catálogo como `js/services-data.js`, listo para extraer dentro de `dist`.
-
-## Abrir y editar
-
-Abre [la web local](sites/raylab/dist/index.html). Parte del contenido se genera desde `services-data.js`, `reference.js` y `service-previews.js`; no todo está directamente en el HTML.
-
-El [editor de servicios](sites/raylab/dist/admin.html) guarda borradores en tu navegador. Exporta un respaldo antes de borrar sus datos. Es un editor local, no un administrador remoto.
-
-## Preparar y subir la web
-
-Desde la raíz del proyecto:
+Ejecuta desde la raíz:
 
 ```powershell
-python tools/web/package-hosting.py
+python herramientas/web/build/package-hosting.py
 ```
 
-Sube [el ZIP](output/raylab/raylab-web-hosting.zip) a Cloudflare Pages o extrae su contenido en la carpeta pública de tu hosting. Incluye solo archivos públicos; excluye el editor y el agente. No subas el proyecto completo ni este ZIP al Worker.
+Entrega: `entregas/raylab/raylab-web-hosting.zip`. Incluye solamente la web pública. El agente se publica por separado en Cloudflare Workers: no se incluye en ese ZIP.
 
-## Agente de WhatsApp
+## Comprobar el proyecto sin abrir un navegador
 
-También está ordenado por tipo: `src/` (código), `config/` (JSON), `database/` (SQL), `scripts/node/`, `scripts/python/`, `scripts/powershell/`, `tests/` y `docs/`. El archivo que copias a Cloudflare ahora es `agents/whatsapp-api/src/worker.mjs`. Los scripts PowerShell están en `agents/whatsapp-api/scripts/powershell/`.
+```powershell
+python herramientas/web/tests/check-project-layout.py
+python herramientas/web/tests/check-service-guides.py
+node herramientas/web/tests/check-quotation.cjs
+node herramientas/web/tests/check-quotation-ui.cjs
+node --test agentes/whatsapp-api/tests/brand.test.mjs agentes/whatsapp-api/tests/worker.test.mjs
+```
 
-Consulta [el backend](agents/whatsapp-api/README.md), [YCloud](agents/whatsapp-api/docs/YCLOUD.md), [el modo multicliente](agents/whatsapp-api/docs/MULTICLIENTE.md) y [las instrucciones comerciales](agents/whatsapp-api/docs/INSTRUCCIONES-AGENTE.md).
+Estas pruebas no envían mensajes reales. Los scripts visuales con Selenium se conservan separados y no se ejecutan automáticamente.
 
-El agente se despliega por separado y utiliza Workers AI, D1 y R2 para archivos generados. Sus secretos se configuran en el servidor, nunca en la web pública. Los manuales históricos describen etapas anteriores; no certifican el estado actual del despliegue.
+## Lo archivado
 
-## Herramientas
+Para actualizar el VPS desde GitHub, sigue [Desplegar desde GitHub](documentacion/DESPLEGAR-DESDE-GITHUB.md). El publicador conserva la carpeta montada y no modifica Caddy ni Compose.
 
-- `tools/web/check-theme.py`: comprueba temas y tamaños con Selenium/Chrome; genera capturas en `output/pruebas-web/`.
-- `tools/web/make-wordmark.py`: genera el logo completo desde `logo.svg`; requiere fontTools y Arial Bold de Windows.
-- `node --test agents/whatsapp-api/tests/worker.test.mjs`: pruebas locales del agente.
+`archivo/` conserva experimentos, Browser Use, copias antiguas y diseños descartados. `entregas/archivo/` conserva scripts históricos y metadatos. Ambos quedan fuera del trabajo diario y del ZIP público. **El agente actual está en agentes/, no en el archivo.**
 
-Se conservan el historial `.git/` y `.openai/hosting.json`, referencia de la publicación antigua. No se incluyen en el ZIP público. Los cambios locales no se publican automáticamente.
-
-Consulta [el manual](docs/RAYLAB-MANUAL.md), [el PDF histórico](docs/RAYLAB-MANUAL.pdf), [los temas](docs/TEMAS-WEB.md) y [la revisión de seguridad](docs/REVISION-SEGURIDAD.md).
+Los secretos se mantienen fuera de Git y nunca se incorporan a la web pública. Reorganizar los archivos locales no publica cambios en Cloudflare.

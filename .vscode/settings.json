@@ -1,0 +1,22 @@
+{
+  "explorer.compactFolders": false,
+  "explorer.fileNesting.enabled": false,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.venv": true,
+    "**/node_modules": true,
+    "**/.wrangler": true,
+    "**/.openai": true,
+    "archivo": true,
+    "entregas/archivo": true,
+    "tools/browser-use": true
+  },
+  "search.exclude": {
+    "archivo/**": true,
+    "entregas/**": true,
+    "**/.venv/**": true,
+    "**/node_modules/**": true,
+    "**/__pycache__/**": true
+  }
+}
